@@ -174,7 +174,6 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
-  shape-image-threshold: round;
 }
 
 .section__text {
@@ -385,6 +384,7 @@ article .icon {
 
 #contact {
   display: flex;
+  margin-top: 45rem;
   justify-content: center;
   flex-direction: column;
   height: 70vh;
