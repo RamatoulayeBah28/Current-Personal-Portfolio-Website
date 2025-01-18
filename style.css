@@ -261,6 +261,18 @@ section {
   gap: 1rem;
 }
 
+.btn.active {
+  background-color: rgb(53, 53, 53);
+   color: white;
+}
+
+#myBtnContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 /* ABOUT SECTION */
 
 #about {
@@ -293,7 +305,8 @@ section {
   bottom: 2.5rem;
 }
 
-.details-container {
+.block-info {
+  
   padding: 1.5rem;
   flex: 1;
   background: white;
@@ -328,9 +341,9 @@ section {
 }
 
 .experience-details-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .article-container {
@@ -366,8 +379,16 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  max-width: 100%; 
+  height: auto;
+}
+
+.project-details-container {
+  display: grid;
+  grid-template-columns: auto auto auto; 
+  gap: 20px; /* Space between cards */
+  margin: 20px auto;
+  padding: 10px;
 }
 
 .project-title {
@@ -380,9 +401,44 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
+.categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.details-container {
+  display: none;
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.block-info:not(.show) {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+/* 
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: red;
+} */
+
+
 /* CONTACT */
 
 #contact {
+  position: relative;
   display: flex;
   margin-top: 45rem;
   justify-content: center;

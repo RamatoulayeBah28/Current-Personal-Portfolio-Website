@@ -38,12 +38,18 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Ramatoulaye Bah profile picture" />
+        <img
+          src="./assets/profile-pic.png"
+          alt="Ramatoulaye Bah profile picture"
+        />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Ramatoulaye Bah</h1>
-        <p class="section__text__p2">Computer Science Student at <a href="https://www.macalester.edu/">Macalester College</a></p>
+        <p class="section__text__p2">
+          Computer Science Student at
+          <a href="https://www.macalester.edu/">Macalester College</a>
+        </p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -84,7 +90,7 @@
         </div>
         <div class="about-details-container">
           <div class="about-containers">
-            <div class="details-container">
+            <div class="block-info">
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
@@ -93,7 +99,7 @@
               <h3>Experience</h3>
               <p>Headstarter AI Software Engineering Fellowship</p>
             </div>
-            <div class="details-container">
+            <div class="block-info">
               <img
                 src="./assets/education.png"
                 alt="Education icon"
@@ -105,10 +111,13 @@
           </div>
           <div class="text-container">
             <p>
-                Sophomore student pursuing a Bachelor of Arts Degree in Computer Science and Linguistics with a minor in Spanish. 
-                Of French nationality and Guinean origin, I thrive to have a positive impact on my communities and I hope 
-                to use technology and the skills I foster daily as tools to achieve this goal. I am passionate about tech, 
-                soccer, languages, social justice, and discovering new things every day!
+              Sophomore student pursuing a Bachelor of Arts Degree in Computer
+              Science and Linguistics with a minor in Spanish. Of French
+              nationality and Guinean origin, I thrive to have a positive impact
+              on my communities and I hope to use technology and the skills I
+              foster daily as tools to achieve this goal. I am passionate about
+              tech, soccer, languages, social justice, and discovering new
+              things every day!
             </p>
           </div>
         </div>
@@ -125,7 +134,7 @@
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container">
+          <div class="block-info">
             <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
@@ -196,7 +205,7 @@
               </article>
             </div>
           </div>
-          <div class="details-container">
+          <div class="block-info">
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
@@ -279,61 +288,43 @@
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/projects/10.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">SmartPrint: Your ChatGPT Footprint</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/ChatGPT-Report'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.canva.com/design/DAGV_hiHY2c/bebHwhPHDRg2LKoeUfT9xg/view?utm_content=DAGV_hiHY2c&utm_campaign=designshare&utm_medium=link&utm_source=editor'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/projects/11.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Binge Eating Disorder Indicator Web App Quiz</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/recoverCareQuiz'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://youtu.be/_E7Rl4ZosW4?si=gTxvmgdyCdgbzZuo'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
+
+      <!-- Categories -->
+      <div id="myBtnContainer">
+        <button
+          class="btn btn-color-2 project-btn active"
+          onclick="filterProjects('all')"
+        >
+          Show all
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="filterProjects('artificial')"
+        >
+          AI Projects
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="filterProjects('web')"
+        >
+          Web Apps
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="filterProjects('games')"
+        >
+          Game Dev
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="filterProjects('others')"
+        >
+          Other Projects
+        </button>
       </div>
-      <div class="experience-details-container">
+      <div class="project-details-container">
         <div class="about-containers">
-          <div class="details-container color-container">
+          <div class="details-container color-container artificial">
             <div class="article-container">
               <img
                 src="./assets/projects/ai-customer-support.png"
@@ -341,7 +332,9 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">AI Customer Support Chatbox</h2>
+            <h2 class="experience-sub-title project-title">
+              AI Customer Support Chatbox
+            </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -357,7 +350,7 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container artificial">
             <div class="article-container">
               <img
                 src="./assets/projects/ai-flashcard.png"
@@ -365,7 +358,9 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">AI Flashcards Generator</h2>
+            <h2 class="experience-sub-title project-title">
+              AI Flashcards Generator
+            </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -381,7 +376,35 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+        </div>
+      </div>
+      <div class="project-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container artificial web">
+            <div class="article-container">
+              <img
+                src="./assets/projects/todos.png"
+                alt="convex to-do list"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">AI Task Manager Web App</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RamatoulayeBah28/convex-todos'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://youtu.be/8kGR4PHDQjI'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container artificial">
             <div class="article-container">
               <img
                 src="./assets/projects/ai-rmp.png"
@@ -389,7 +412,9 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">AI Rate My Professor</h2>
+            <h2 class="experience-sub-title project-title">
+              AI Rate My Professor
+            </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -405,11 +430,63 @@
               </button>
             </div>
           </div>
+          <div class="details-container color-container web">
+            <div class="article-container">
+              <img
+                src="./assets/projects/10.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              SmartPrint: Your ChatGPT Footprint
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RamatoulayeBah28/ChatGPT-Report'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.canva.com/design/DAGV_hiHY2c/bebHwhPHDRg2LKoeUfT9xg/view?utm_content=DAGV_hiHY2c&utm_campaign=designshare&utm_medium=link&utm_source=editor'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="experience-details-container">
+      <div class="project-details-container">
         <div class="about-containers">
-          <div class="details-container color-container">
+          <div class="details-container color-container web">
+            <div class="article-container">
+              <img
+                src="./assets/projects/11.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Binge Eating Disorder Indicator Quiz
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RamatoulayeBah28/recoverCareQuiz'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://youtu.be/_E7Rl4ZosW4?si=gTxvmgdyCdgbzZuo'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container web">
             <div class="article-container">
               <img
                 src="./assets/projects/2.png"
@@ -431,9 +508,9 @@
               >
                 Live Demo
               </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
+        </div>
+      </div>
+          <div class="details-container color-container web">
             <div class="article-container">
               <img
                 src="./assets/projects/1.png"
@@ -457,7 +534,11 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+        </div>
+      </div>
+      <div class="project-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container others">
             <div class="article-container">
               <img
                 src="./assets/projects/3.png"
@@ -481,160 +562,162 @@
               </button>
             </div>
           </div>
+          <div class="details-container color-container others">
+            <div class="article-container">
+              <img
+                src="./assets/projects/social.png"
+                alt="Project 9"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Social Network</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RamatoulayeBah28/Social-Network-Visualizer'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.canva.com/design/DAGZBR382TA/TeXhgAuhA7Byf-t99d-62w/view?utm_content=DAGZBR382TA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4fa6c01fd4'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container others">
+            <div class="article-container">
+              <img
+                src="./assets/projects/7.png"
+                alt="Project 7"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Beauty</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.instagram.com/projectbeauty.nl/'"
+              >
+                Instagram
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://ziaowens.wixsite.com/project-beauty/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          </div>
+          </div>
         </div>
-      </div>
-      <div class="experience-details-container">
-        <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                  <img
-                    src="./assets/projects/4.png"
-                    alt="Project 1"
-                    class="project-img"
-                  />
-                </div>
-                <h2 class="experience-sub-title project-title">A Squirrel's Tail</h2>
-                <div class="btn-container">
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://github.com/RamatoulayeBah28/CupidJam'"
-                  >
-                    Github
-                  </button>
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://youtu.be/M0sl7HwaKJ8'"
-                  >
-                    Live Demo
-                  </button>
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <img
-                    src="./assets/projects/todos.png"
-                    alt="convex to-do list"
-                    class="project-img"
-                  />
-                </div>
-                <h2 class="experience-sub-title project-title">Task Manager App</h2>
-                <div class="btn-container">
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://github.com/RamatoulayeBah28/convex-todos'"
-                  >
-                    Github
-                  </button>
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://youtu.be/8kGR4PHDQjI'"
-                  >
-                    Live Demo
-                  </button>
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <img
-                    src="./assets/projects/6.png"
-                    alt="Project 1"
-                    class="project-img"
-                  />
-                </div>
-                <h2 class="experience-sub-title project-title">Fashion Famous</h2>
-                <div class="btn-container">
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://github.com/RamatoulayeBah28/Fashion-Famous'"
-                  >
-                    Github
-                  </button>
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://www.canva.com/design/DAGDPwfvXMc/ywJk-ZEbVqjaGZBA65hLhw/view?utm_content=DAGDPwfvXMc&utm_campaign=designshare&utm_medium=link&utm_source=editor'"
-                  >
-                    Live Demo
-                  </button>
-                </div>
-              </div>
+        <div class="project-details-container">
+          <div class="about-containers"> 
+            <div class="details-container color-container games">
+            <div class="article-container">
+              <img
+                src="./assets/projects/4.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              A Squirrel's Tail
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RamatoulayeBah28/CupidJam'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://youtu.be/M0sl7HwaKJ8'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container games">
+            <div class="article-container">
+              <img
+                src="./assets/projects/6.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Fashion Famous</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RamatoulayeBah28/Fashion-Famous'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.canva.com/design/DAGDPwfvXMc/ywJk-ZEbVqjaGZBA65hLhw/view?utm_content=DAGDPwfvXMc&utm_campaign=designshare&utm_medium=link&utm_source=editor'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          </div>
         </div>
-      </div>
-      <div class="experience-details-container">
-        <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                  <img
-                    src="./assets/projects/7.png"
-                    alt="Project 7"
-                    class="project-img"
-                  />
-                </div>
-                <h2 class="experience-sub-title project-title">Project Beauty</h2>
-                <div class="btn-container">
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://www.instagram.com/projectbeauty.nl/'"
-                  >
-                    Instagram
-                  </button>
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://ziaowens.wixsite.com/project-beauty/'"
-                  >
-                    Live Demo
-                  </button>
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <img
-                    src="./assets/projects/5.png"
-                    alt="Project 1"
-                    class="project-img"
-                  />
-                </div>
-                <h2 class="experience-sub-title project-title">Hangman Game</h2>
-                <div class="btn-container">
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://github.com/RamatoulayeBah28/Hangman-Game'"
-                  >
-                    Github
-                  </button>
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://youtu.be/Xzhpl5OSJPk'"
-                  >
-                    Live Demo
-                  </button>
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <img
-                    src="./assets/projects/8.png"
-                    alt="Project 8"
-                    class="project-img"
-                  />
-                </div>
-                <h2 class="experience-sub-title project-title">Breakout Game</h2>
-                <div class="btn-container">
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://github.com/RamatoulayeBah28/Breakout-Game'"
-                  >
-                    Github
-                  </button>
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://youtu.be/YyoGGWhyg34'"
-                  >
-                    Live Demo
-                  </button>
-                </div>
-              </div>
+        <div class="project-details-container">
+          <div class="about-containers"> 
+          <div class="details-container color-container games">
+            <div class="article-container">
+              <img
+                src="./assets/projects/5.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Hangman Game</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RamatoulayeBah28/Hangman-Game'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://youtu.be/Xzhpl5OSJPk'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container games">
+            <div class="article-container">
+              <img
+                src="./assets/projects/8.png"
+                alt="Project 8"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Breakout Game</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RamatoulayeBah28/Breakout-Game'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://youtu.be/YyoGGWhyg34'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
         </div>
-        
       </div>
       <img
         src="./assets/arrow.png"
@@ -653,7 +736,11 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:Ramatoulaye.bah2805@gmail.com">Ramatoulaye.bah2805@gmail.com</a></p>
+          <p>
+            <a href="mailto:Ramatoulaye.bah2805@gmail.com"
+              >Ramatoulaye.bah2805@gmail.com</a
+            >
+          </p>
         </div>
         <div class="contact-info-container">
           <img
@@ -661,7 +748,11 @@
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com/in/ramatoulaye-bah-aa8b4a271/">LinkedIn</a></p>
+          <p>
+            <a href="https://www.linkedin.com/in/ramatoulaye-bah-aa8b4a271/"
+              >LinkedIn</a
+            >
+          </p>
         </div>
       </div>
     </section>
@@ -676,8 +767,9 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Ramatoulaye Bah. All Rights Reserved.</p>
+      <p>Copyright &#169; 2025 Ramatoulaye Bah. All Rights Reserved.</p>
     </footer>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="script.js"></script>
   </body>
 </html>
