@@ -1,17 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Ramatoulaye Bah</div>
-      <div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Ramatoulaye Bah</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Ramatoulaye Bah</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="Ramatoulaye Bah profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Ramatoulaye Bah</h1>
+      <p class="section__text__p2">
+        Computer Science Student at
+        <a href="https://www.macalester.edu/">Macalester College</a>
+      </p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('assets/Resume Ramatoulaye Bah 08:10.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/ramatoulaye-bah-aa8b4a271/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/RamatoulayeBah28'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="block-info">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>Headstarter AI Software Engineering Fellowship</p>
+          </div>
+          <div class="block-info">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.A. Bachelors Degree<br />Computer Science | Linguistics</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            Sophomore student pursuing a Bachelor of Arts Degree in Computer
+            Science and Linguistics with a minor in Spanish. Of French
+            nationality and Guinean origin, I thrive to have a positive impact
+            on my communities and I hope to use technology and the skills I
+            foster daily as tools to achieve this goal. I am passionate about
+            tech, soccer, languages, social justice, and discovering new
+            things every day!
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="block-info">
+          <h2 class="experience-sub-title">Backend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Java</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Python</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>C</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Node JS</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>SQL</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Material UI</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="block-info">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>React</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Next JS</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+
+    <!-- Categories -->
+    <div id="myBtnContainer">
+      <button class="btn btn-color-2 project-btn active" onclick="filterProjects('all')">
+        Show all
+      </button>
+      <button class="btn btn-color-2 project-btn" onclick="filterProjects('artificial')">
+        AI Projects
+      </button>
+      <button class="btn btn-color-2 project-btn" onclick="filterProjects('web')">
+        Web Apps
+      </button>
+      <button class="btn btn-color-2 project-btn" onclick="filterProjects('games')">
+        Game Dev
+      </button>
+      <button class="btn btn-color-2 project-btn" onclick="filterProjects('others')">
+        Other Projects
+      </button>
+    </div>
+    <div class="project-details-container">
+      <div class="about-containers-project">
+
+        <!-- AI Chatbot -->
+        <div class="details-container color-container artificial">
+          <div class="article-container">
+            <img src="./assets/projects/ai-customer-support.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            AI Customer Support Chatbot
+          </h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/AI-Customer-Support'">
+              Github
+            </button>
+            <!-- <button class="btn btn-color-2 project-btn" id="myBtn" onclick="viewDetails('ai-customer-support')">
+              View Details
+            </button> -->
+            <!-- <div id="myModal" class="modal">
+              Modal content -->
+              <!-- <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>A sustainable water use consultant connected to the WaterWise website enabling users to get instant support and answers to questions about the website’s features and water conservation tips | <strong>React, JavaScript, CSS, Together AI API, Vercel</strong></p>
+              </div>
+            </div> -->
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://waterwise-wateruseconsultant-chat.vercel.app/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+        <!-- AI Flashcards Generator -->
+        <div class="details-container color-container artificial">
+          <div class="article-container">
+            <img src="./assets/projects/ai-flashcard.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            AI Flashcards Generator
+          </h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/Flashcard-AI'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://www.youtube.com/watch?v=JzzsYHl7RU4'">
+              Live Demo
+            </button>
+      </div>
+    </div>
+
+    <!-- AI Task Manager Web App -->
+        <div class="details-container color-container artificial web">
+          <div class="article-container">
+            <img src="./assets/projects/todos.png" alt="convex to-do list" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">AI Task Manager Web App</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/convex-todos'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/8kGR4PHDQjI'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+        <!-- AI Rate My Professor -->
+        <div class="details-container color-container artificial">
+          <div class="article-container">
+            <img src="./assets/projects/ai-rmp.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            AI Rate My Professor
+          </h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/AI-Rate-My-Professor'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/avh-w1ZEI1Q'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+        <!-- SmartPrint -->
+        <div class="details-container color-container web">
+          <div class="article-container">
+            <img src="./assets/projects/10.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            SmartPrint: Your ChatGPT Footprint
+          </h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/ChatGPT-Report'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://www.canva.com/design/DAGV_hiHY2c/bebHwhPHDRg2LKoeUfT9xg/view?utm_content=DAGV_hiHY2c&utm_campaign=designshare&utm_medium=link&utm_source=editor'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container web">
+          <div class="article-container">
+            <img src="./assets/projects/11.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            Binge Eating Disorder Indicator Quiz
+          </h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/recoverCareQuiz'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://youtu.be/_E7Rl4ZosW4?si=gTxvmgdyCdgbzZuo'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container web">
+          <div class="article-container">
+            <img src="./assets/projects/2.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Water Tracker</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/WaterWise'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://waterwise-watersustainability.netlify.app/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container web">
+          <div class="article-container">
+            <img src="./assets/projects/1.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Pantry Tracker</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/Inventory-Management'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/XJ7RQF05Krs'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container others">
+          <div class="article-container">
+            <img src="./assets/projects/3.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Weather App</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/Weather-Display'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/Weather-Display'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container others">
+          <div class="article-container">
+            <img src="./assets/projects/social.png" alt="Project 9" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Social Network</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/Social-Network-Visualizer'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://www.canva.com/design/DAGZBR382TA/TeXhgAuhA7Byf-t99d-62w/view?utm_content=DAGZBR382TA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4fa6c01fd4'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container others">
+          <div class="article-container">
+            <img src="./assets/projects/7.png" alt="Project 7" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Beauty</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://www.instagram.com/projectbeauty.nl/'">
+              Instagram
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://ziaowens.wixsite.com/project-beauty/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container games">
+          <div class="article-container">
+            <img src="./assets/projects/4.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            A Squirrel's Tail
+          </h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/CupidJam'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/M0sl7HwaKJ8'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container games">
+          <div class="article-container">
+            <img src="./assets/projects/6.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Fashion Famous</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/Fashion-Famous'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://www.canva.com/design/DAGDPwfvXMc/ywJk-ZEbVqjaGZBA65hLhw/view?utm_content=DAGDPwfvXMc&utm_campaign=designshare&utm_medium=link&utm_source=editor'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container games">
+          <div class="article-container">
+            <img src="./assets/projects/5.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Hangman Game</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/Hangman-Game'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/Xzhpl5OSJPk'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container games">
+          <div class="article-container">
+            <img src="./assets/projects/8.png" alt="Project 8" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Breakout Game</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/RamatoulayeBah28/Breakout-Game'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/YyoGGWhyg34'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p>
+          <a href="mailto:Ramatoulaye.bah2805@gmail.com">Ramatoulaye.bah2805@gmail.com</a>
+        </p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p>
+          <a href="https://www.linkedin.com/in/ramatoulaye-bah-aa8b4a271/">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -20,756 +525,10 @@
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Ramatoulaye Bah</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img
-          src="./assets/profile-pic.png"
-          alt="Ramatoulaye Bah profile picture"
-        />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Ramatoulaye Bah</h1>
-        <p class="section__text__p2">
-          Computer Science Student at
-          <a href="https://www.macalester.edu/">Macalester College</a>
-        </p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('assets/Resume Ramatoulaye Bah 08:10.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/ramatoulaye-bah-aa8b4a271/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/RamatoulayeBah28'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="block-info">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>Headstarter AI Software Engineering Fellowship</p>
-            </div>
-            <div class="block-info">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.A. Bachelors Degree<br />Computer Science | Linguistics</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Sophomore student pursuing a Bachelor of Arts Degree in Computer
-              Science and Linguistics with a minor in Spanish. Of French
-              nationality and Guinean origin, I thrive to have a positive impact
-              on my communities and I hope to use technology and the skills I
-              foster daily as tools to achieve this goal. I am passionate about
-              tech, soccer, languages, social justice, and discovering new
-              things every day!
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="block-info">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="block-info">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Next JS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+    <p>Copyright &#169; 2025 Ramatoulaye Bah. All Rights Reserved.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
 
-      <!-- Categories -->
-      <div id="myBtnContainer">
-        <button
-          class="btn btn-color-2 project-btn active"
-          onclick="filterProjects('all')"
-        >
-          Show all
-        </button>
-        <button
-          class="btn btn-color-2 project-btn"
-          onclick="filterProjects('artificial')"
-        >
-          AI Projects
-        </button>
-        <button
-          class="btn btn-color-2 project-btn"
-          onclick="filterProjects('web')"
-        >
-          Web Apps
-        </button>
-        <button
-          class="btn btn-color-2 project-btn"
-          onclick="filterProjects('games')"
-        >
-          Game Dev
-        </button>
-        <button
-          class="btn btn-color-2 project-btn"
-          onclick="filterProjects('others')"
-        >
-          Other Projects
-        </button>
-      </div>
-      <div class="project-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container artificial">
-            <div class="article-container">
-              <img
-                src="./assets/projects/ai-customer-support.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              AI Customer Support Chatbox
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/AI-Customer-Support'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://waterwise-wateruseconsultant-chat.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container artificial">
-            <div class="article-container">
-              <img
-                src="./assets/projects/ai-flashcard.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              AI Flashcards Generator
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/Flashcard-AI'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.youtube.com/watch?v=JzzsYHl7RU4'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="project-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container artificial web">
-            <div class="article-container">
-              <img
-                src="./assets/projects/todos.png"
-                alt="convex to-do list"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">AI Task Manager Web App</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/convex-todos'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://youtu.be/8kGR4PHDQjI'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container artificial">
-            <div class="article-container">
-              <img
-                src="./assets/projects/ai-rmp.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              AI Rate My Professor
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/AI-Rate-My-Professor'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://youtu.be/avh-w1ZEI1Q'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container web">
-            <div class="article-container">
-              <img
-                src="./assets/projects/10.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              SmartPrint: Your ChatGPT Footprint
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/ChatGPT-Report'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.canva.com/design/DAGV_hiHY2c/bebHwhPHDRg2LKoeUfT9xg/view?utm_content=DAGV_hiHY2c&utm_campaign=designshare&utm_medium=link&utm_source=editor'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="project-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container web">
-            <div class="article-container">
-              <img
-                src="./assets/projects/11.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Binge Eating Disorder Indicator Quiz
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/recoverCareQuiz'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://youtu.be/_E7Rl4ZosW4?si=gTxvmgdyCdgbzZuo'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container web">
-            <div class="article-container">
-              <img
-                src="./assets/projects/2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Water Tracker</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/WaterWise'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://waterwise-watersustainability.netlify.app/'"
-              >
-                Live Demo
-              </button>
-        </div>
-      </div>
-          <div class="details-container color-container web">
-            <div class="article-container">
-              <img
-                src="./assets/projects/1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Pantry Tracker</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/Inventory-Management'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://youtu.be/XJ7RQF05Krs'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="project-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container others">
-            <div class="article-container">
-              <img
-                src="./assets/projects/3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Weather App</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/Weather-Display'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/Weather-Display'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container others">
-            <div class="article-container">
-              <img
-                src="./assets/projects/social.png"
-                alt="Project 9"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Social Network</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/Social-Network-Visualizer'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.canva.com/design/DAGZBR382TA/TeXhgAuhA7Byf-t99d-62w/view?utm_content=DAGZBR382TA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4fa6c01fd4'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container others">
-            <div class="article-container">
-              <img
-                src="./assets/projects/7.png"
-                alt="Project 7"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Beauty</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.instagram.com/projectbeauty.nl/'"
-              >
-                Instagram
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://ziaowens.wixsite.com/project-beauty/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          </div>
-          </div>
-        </div>
-        <div class="project-details-container">
-          <div class="about-containers"> 
-            <div class="details-container color-container games">
-            <div class="article-container">
-              <img
-                src="./assets/projects/4.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              A Squirrel's Tail
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/CupidJam'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://youtu.be/M0sl7HwaKJ8'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container games">
-            <div class="article-container">
-              <img
-                src="./assets/projects/6.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Fashion Famous</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/Fashion-Famous'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.canva.com/design/DAGDPwfvXMc/ywJk-ZEbVqjaGZBA65hLhw/view?utm_content=DAGDPwfvXMc&utm_campaign=designshare&utm_medium=link&utm_source=editor'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          </div>
-        </div>
-        <div class="project-details-container">
-          <div class="about-containers"> 
-          <div class="details-container color-container games">
-            <div class="article-container">
-              <img
-                src="./assets/projects/5.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Hangman Game</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/Hangman-Game'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://youtu.be/Xzhpl5OSJPk'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container games">
-            <div class="article-container">
-              <img
-                src="./assets/projects/8.png"
-                alt="Project 8"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Breakout Game</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/RamatoulayeBah28/Breakout-Game'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://youtu.be/YyoGGWhyg34'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p>
-            <a href="mailto:Ramatoulaye.bah2805@gmail.com"
-              >Ramatoulaye.bah2805@gmail.com</a
-            >
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p>
-            <a href="https://www.linkedin.com/in/ramatoulaye-bah-aa8b4a271/"
-              >LinkedIn</a
-            >
-          </p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2025 Ramatoulaye Bah. All Rights Reserved.</p>
-    </footer>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <script src="script.js"></script>
-  </body>
 </html>
