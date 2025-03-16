@@ -271,6 +271,7 @@ section {
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+  margin-left: 80px;
 }
 
 /* ABOUT SECTION */
@@ -370,6 +371,7 @@ article .icon {
 
 #projects {
   position: relative;
+  margin-left: 60px;
 }
 
 .color-container {
@@ -415,6 +417,7 @@ article .icon {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  width: 370px;
 }
 
 .block-info:not(.show) {
