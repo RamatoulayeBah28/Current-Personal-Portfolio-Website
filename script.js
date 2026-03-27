@@ -1,3 +1,12 @@
+function toggleProjects(btn) {
+  const extras = document.querySelectorAll('.project-extra');
+  const expanded = !extras[0].hidden;
+  extras.forEach(el => { el.hidden = expanded; });
+  btn.innerHTML = expanded
+    ? 'See More <span class="toggle-arrow">↓</span>'
+    : 'See Less <span class="toggle-arrow">↑</span>';
+}
+
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
@@ -19,13 +28,15 @@ function filterProjects(c) {
 
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn btn-color-2 project-btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+if (btnContainer) {
+  var btns = btnContainer.getElementsByClassName("btn btn-color-2 project-btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
 }
 
 // View Details Container

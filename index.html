@@ -1,811 +1,1053 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
-</head>
-
-<body>
-  <nav id="desktop-nav">
-    <div class="logo">Ramatoulaye Bah</div>
-    <div>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nav-logo">RB</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">Ramatoulaye Bah</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
-    </div>
-  </nav>
-  <section id="profile">
-    <div class="section__pic-container" id="first-pic">
-      <img src="./assets/IMG_1307.jpg" alt="Ramatoulaye Bah profile picture" />
-    </div>
-    
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Ramatoulaye Bah</h1>
-      <p class="section__text__p2">
-        Computer Science Student at
-        <a href="https://www.macalester.edu/">Macalester College</a>
-      </p>
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('assets/Resume_Ramatoulaye_Bah (1).pdf')">
-          Download CV
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contact Info
-        </button>
-      </div>
-      <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-          onclick="location.href='https://www.linkedin.com/in/ramatoulaye-bah-aa8b4a271/'" />
-        <img src="./assets/github.png" alt="My Github profile" class="icon"
-          onclick="location.href='https://github.com/RamatoulayeBah28'" />
-      </div>
-    </div>
-  </section>
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
-      </div>
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="block-info">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Experience</h3>
-            <p>
-              <a href="https://sites.google.com/macalester.edu/ramatoulayebah/home">Gobo Show, Inc.</a><br />
-        Web Development Intern</p>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-tag">Full-Stack Developer</p>
+          <div class="hero-name">
+            <h1>Rama</h1>
+            <span class="hero-name-italic">Bah</span>
           </div>
-          <div class="block-info">
-            <img src="./assets/education.png" alt="Education icon" class="icon" />
-            <h3>Education</h3>
-            <p>B.A. Bachelors Degree<br />Computer Science | Linguistics</p>
+          <p class="hero-desc">
+            I build software that serves communities by leveraging AI and my
+            Computer Science and Linguistics background. I'm a problem solver,
+            passionate about tech, social justice, languages and curious to
+            learn new things every day!
+          </p>
+          <div class="hero-cta">
+            <a href="#work" class="btn-primary">See my work</a>
+            <a
+              href="assets/Resume_Ramatoulaye_Bah.pdf"
+              target="_blank"
+              class="btn-outline"
+              >Download CV</a
+            >
+          </div>
+          <div class="photo-socials">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+              onclick="
+                location.href =
+                  'https://www.linkedin.com/in/ramatoulaye-bah-aa8b4a271/'
+              "
+            />
+            <img
+              src="./assets/github.png"
+              alt="My Github profile"
+              class="icon"
+              onclick="location.href = 'https://github.com/RamatoulayeBah28'"
+            />
           </div>
         </div>
-        <div class="text-container">
+
+        <div class="hero-photo">
+          <img src="./assets/IMG_1307.jpg" alt="Ramatoulaye Bah" />
+        </div>
+      </div>
+      <div class="hero-stats-bar">
+        <div class="stat">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Spoken languages</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Programming languages</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">15+</span>
+          <span class="stat-label">Projects shipped</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3.92</span>
+          <span class="stat-label">GPA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE (01) -->
+    <section id="experience">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Experience</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="experience-list">
+        <div class="exp-item">
+          <p class="exp-date">May – December 2025</p>
+          <p class="exp-role">Front-End Developer Intern</p>
+          <p class="exp-company">Gobo Show, Inc. · Minneapolis, MN</p>
+          <ul class="exp-bullets">
+            <li>
+              Migrated the Events page from Vue 2 to
+              <strong>Next.js with server-side rendering</strong> using
+              TypeScript and Tailwind CSS, reducing load times by 30%.
+            </li>
+            <li>
+              Built onboarding features in React and Firebase with anonymous
+              authentication and account conversion, improving artist signup
+              completion rates by 25%.
+            </li>
+            <li>
+              Collaborated with product and marketing in two-week sprints to
+              ship venue management features for Gobo Pro, from wireframe to
+              production.
+            </li>
+          </ul>
+          <a
+            href="https://sites.google.com/macalester.edu/ramatoulayebah/home"
+            target="_blank"
+            class="exp-link"
+            >Learn More ↗</a
+          >
+        </div>
+
+        <div class="exp-item">
+          <p class="exp-date">July – September 2024</p>
+          <p class="exp-role">Software Engineering Fellow</p>
+          <p class="exp-company">Headstarter AI · Remote</p>
+          <ul class="exp-bullets">
+            <li>
+              Built and deployed
+              <strong>5+ AI projects in 5 weeks</strong> using React, Next.js,
+              Firebase, and Vercel while integrating OpenAI, Pinecone, and
+              Stripe APIs with CI/CD practices.
+            </li>
+            <li>
+              Led a team of 4 engineering fellows using
+              <strong>MVC design patterns</strong>, taking projects from design
+              to deployment.
+            </li>
+            <li>
+              Mentored by engineers from Google, Y Combinator, Amazon, and
+              Stanford.
+            </li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <p class="exp-date">July – October 2024</p>
+          <p class="exp-role">Open Source Contributor</p>
+          <p class="exp-company">R.care (YC W21) · Remote</p>
+          <ul class="exp-bullets">
+            <li>
+              As the capstone of the Headstarter fellowship, reached out to
+              R.care,
+              <strong>a YC-backed eating disorder recovery startup</strong>, and
+              secured the opportunity to contribute to their product backlog
+              independently.
+            </li>
+            <li>
+              Built a multi-step Binge Eating Disorder Indicator quiz with
+              React, Next.js, and Firebase for quiz results and personalized
+              recovery plans, improving predicted user accessibility by 25%.
+            </li>
+            <li>
+              Integrated a Stripe paywall with post-purchase app download flow,
+              and optimized frontend performance reducing page load time by 20%.
+            </li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <p class="exp-date">September 2024 – May 2025</p>
+          <p class="exp-role">Teaching Assistant — Core Concepts in CS</p>
+          <p class="exp-company">Macalester College · St. Paul, MN</p>
+          <ul class="exp-bullets">
+            <li>
+              Supported 30+ students in Python fundamentals through weekly
+              office hours, one-on-one help, and graded assignments.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECT (02) -->
+    <section id="work" class="featured">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Featured Project</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="featured-grid">
+        <div>
+          <p class="featured-label">Starting Soon · Summer 2026</p>
+          <h3 class="featured-name">demystify<span>.org</span></h3>
+          <p class="featured-desc">
+            Somali immigrants in the Twin Cities face a barrier I know
+            personally: tax documents dense with legal jargon, and no affordable
+            way to understand them. demystify.org is a 2-in-1 platform offering
+            AI-assisted translation of tax documents into plain Somali, while
+            connecting users to trusted community interpreters when nuance
+            matters most.
+          </p>
+          <p class="featured-desc">
+            Co-designed with the community, grounded in NLP, and built to reduce
+            real financial burden during tax season.
+          </p>
+          <div class="featured-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">React</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">SUPABASE</span>
+            <span class="tag">Tesseract.js</span>
+            <span class="tag">Claude API</span>
+            <span class="tag">Web Speech API</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+          <a
+            href="https://github.com/RamatoulayeBah28"
+            target="_blank"
+            class="btn-light"
+            >View on GitHub →</a
+          >
+        </div>
+        <div>
+          <div class="impact-card">
+            <p class="impact-card-title">The Problem</p>
+            <p class="impact-card-text">
+              Professional interpreters can cost $50–150/hr and aren't always
+              available during tax season. Most Somali-speaking families
+              navigate this alone, or not at all.
+            </p>
+          </div>
+          <div class="impact-card">
+            <p class="impact-card-title">The Approach</p>
+            <p class="impact-card-text">
+              Machine translation handles the bulk of document simplification
+              while human community interpreters are surfaced for complex
+              passages: a hybrid that balances access with accuracy.
+            </p>
+          </div>
+          <div class="impact-card">
+            <p class="impact-card-title">Why This</p>
+            <p class="impact-card-text">
+              As a child of immigrant parents who I had to help navigate taxes
+              in a foreign language, I understand firsthand the struggles that
+              come with it. This project aims to solve a global issue by scaling
+              it first to one language, one community and one task.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER PROJECTS (03) -->
+    <section id="projects">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Other Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <p class="project-year">2025</p>
+          <h3 class="project-title">LingoHub</h3>
+          <p class="project-desc">
+            Social platform for language enthusiasts to connect, share
+            experiences, and learn from each other. Full-stack React app with
+            real-time features including creating, editing, upvoting and saving
+            posts alongside filtering by tags.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">React</span>
+              <span class="tag-small">PostgreSQL</span>
+              <span class="tag-small">Supabase</span>
+              <span class="tag-small">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/LingoHub"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://lingo-hub.vercel.app/"
+                target="_blank"
+                class="project-link"
+                >Live →</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <p class="project-year">2025</p>
+          <h3 class="project-title">SmartPrint: Your ChatGPT Footprint</h3>
+          <p class="project-desc">
+            Hackathon finalist (24 hrs). Upload your ChatGPT data export and
+            receive a personalized report on usage patterns and environmental
+            footprint.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">React</span>
+              <span class="tag-small">Next.js</span>
+              <span class="tag-small">CSS</span>
+              <span class="tag-small">JavaScript</span>
+              <span class="tag-small">Hackathon</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/ChatGPT-Report"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://www.canva.com/design/DAGV_hiHY2c/bebHwhPHDRg2LKoeUfT9xg/view?utm_content=DAGV_hiHY2c&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <p class="project-year">2024</p>
+          <h3 class="project-title">Social Network Visualizer</h3>
+          <p class="project-desc">
+            Data Structures final project. Built a social network analysis tool
+            that computes relationship weights between users, implements
+            Google's PageRank algorithm to rank influence, and renders an
+            interactive graph where you can click nodes to explore connections
+            and a top-5 leaderboard.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Java</span>
+              <span class="tag-small">PageRank</span>
+              <span class="tag-small">Graph Theory</span>
+              <span class="tag-small">Data Structures</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/Social-Network-Visualizer"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://www.canva.com/design/DAGZBR382TA/TeXhgAuhA7Byf-t99d-62w/view?utm_content=DAGZBR382TA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4fa6c01fd4"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <p class="project-year">2024</p>
+          <h3 class="project-title">AI Task Manager</h3>
+          <p class="project-desc">
+            Full-stack to-do app with user authentication, AI-powered task
+            suggestions, and smart title/description generation. Built with
+            real-time sync via Convex.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Next.js</span>
+              <span class="tag-small">Convex</span>
+              <span class="tag-small">Clerk</span>
+              <span class="tag-small">TypeScript</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/convex-todos"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://youtu.be/8kGR4PHDQjI"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <p class="project-year">2024</p>
+          <h3 class="project-title">
+            Binge Eating Disorder Indicator Quiz App
+          </h3>
+          <p class="project-desc">
+            Contributed to R.care (YC W21)'s product backlog with a certified
+            initial self-assessment quiz using Firebase as a database, Stripe
+            paywall, and personalized recovery plans.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">React</span>
+              <span class="tag-small">Next.js</span>
+              <span class="tag-small">Figma</span>
+
+              <span class="tag-small">JavaScript</span>
+
+              <span class="tag-small">Firebase</span>
+              <span class="tag-small">Stripe</span>
+              <span class="tag-small">Bootstrap</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/recoverCareQuiz"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://youtu.be/_E7Rl4ZosW4?si=gTxvmgdyCdgbzZuo"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <p class="project-year">2024</p>
+          <h3 class="project-title">AI Flashcard Generator</h3>
+          <p class="project-desc">
+            AI-driven flashcard app that generates topic-specific Q&amp;A sets
+            for studying. Includes a Stripe paywall and user accounts, deployed
+            on Vercel.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Next.js</span>
+              <span class="tag-small">OpenAI</span>
+              <span class="tag-small">Stripe</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/Flashcard-AI"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=JzzsYHl7RU4"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <p class="project-year">2024</p>
+          <h3 class="project-title">AI Rate My Professor</h3>
+          <p class="project-desc">
+            A Rate My Professor chatbot assistant that provides a streamlined
+            and focused search experience, allowing users to filter through
+            professors based on specific criteria such as ratings, student
+            reviews, and department.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">React</span>
+              <span class="tag-small">Next.js</span>
+              <span class="tag-small">Python</span>
+              <span class="tag-small">OpenAI</span>
+              <span class="tag-small">Pinecone Database</span>
+              <span class="tag-small">Vercel</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/AI-Rate-My-Professor"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://youtu.be/avh-w1ZEI1Q"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <p class="project-year">2024</p>
+          <h3 class="project-title">AI Customer Support Chatbot</h3>
+          <p class="project-desc">
+            A sustainable water use consultant connected to the WaterWise
+            website enabling users to get instant support and answers to
+            questions about the website’s features and water conservation tips.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">React</span>
+              <span class="tag-small">Next.js</span>
+              <span class="tag-small">JavaScript</span>
+              <span class="tag-small">Together AI API</span>
+              <span class="tag-small">Vercel</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/AI-Customer-Support"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://waterwise-wateruseconsultant-chat.vercel.app/"
+                target="_blank"
+                class="project-link"
+                >Live →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card project-extra" hidden>
+          <p class="project-year">2025</p>
+          <h3 class="project-title">Sorting Visualizer</h3>
+          <p class="project-desc">
+            This final algortithm project shows the animation of three common
+            sorting algorithms - merge sort, quicksort, and heap sort. Through
+            colors and animated movements it provides a clear visualization of
+            how the sorting methods work.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Python</span>
+              <span class="tag-small">Tkinter</span>
+              <span class="tag-small">Algorithm</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/AlgoFinalProject"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://youtu.be/fvPdx_Jq39U"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card project-extra" hidden>
+          <p class="project-year">2025</p>
+          <h3 class="project-title">Travinder</h3>
+          <p class="project-desc">
+            Think dating app meets travel agent. Swipe to match with a travel
+            destination based on your preferences. Built natively for iOS.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Swift</span>
+              <span class="tag-small">Xcode</span>
+              <span class="tag-small">iOS</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/Travinder"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card project-extra" hidden>
+          <p class="project-year">2025</p>
+          <h3 class="project-title">GeoCipher</h3>
+          <p class="project-desc">
+            A digital escape room where players learn world geography by
+            uncovering hidden clues. Built as the Software Development class
+            final project.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Unity</span>
+              <span class="tag-small">C#</span>
+              <span class="tag-small">Game Dev</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/GeoCipher"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://docs.google.com/presentation/d/1XnishQUYQrABHwmsFnGCX7CUcVAv9RoxGjls2bNyWXg/edit?slide=id.gc6f80d1ff_0_27&pli=1#slide=id.gc6f80d1ff_0_27"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card project-extra" hidden>
+          <p class="project-year">2024</p>
+          <h3 class="project-title">Fashion Famous</h3>
+          <p class="project-desc">
+            An interactive fashion dress-up game inspired by the Roblox game
+            Dress To Impress that allows the user to pick clothes based on a
+            pre-defined theme and compare the final look to the jury's pick.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Java</span>
+              <span class="tag-small">Kilt Graphic Library</span>
+              <span class="tag-small">Canva</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/Fashion-Famous"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://www.canva.com/design/DAGDPwfvXMc/ywJk-ZEbVqjaGZBA65hLhw/view?utm_content=DAGDPwfvXMc&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-card project-extra" hidden>
+          <p class="project-year">2024</p>
+          <h3 class="project-title">A Squirrel's Tail</h3>
+          <p class="project-desc">
+            A Valentine's Day themed platform game made in 48 hours at the first
+            Macalester College Game Jam. Help your squirrel climb up while
+            avoiding obstacles to be reunited with their lover.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Python</span>
+              <span class="tag-small">PyGame</span>
+              <span class="tag-small">Game Jam</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/CupidJam"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://youtu.be/M0sl7HwaKJ8"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card project-extra" hidden>
+          <p class="project-year">2024</p>
+          <h3 class="project-title">WaterWise - Water Tracker</h3>
+          <p class="project-desc">
+            An educational website that helps users track their daily water
+            consumption by providing a score based on their usage alongside
+            resources on water conservation.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">HTML</span>
+              <span class="tag-small">Bootstrap</span>
+              <span class="tag-small">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/WaterWise"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://waterwise-watersustainability.netlify.app/"
+                target="_blank"
+                class="project-link"
+                >Live →</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-card project-extra" hidden>
+          <p class="project-year">2024</p>
+          <h3 class="project-title">Pantry Tracker</h3>
+          <p class="project-desc">
+            A simple inventory management web app that allows the user to add,
+            filter and delete items from a digital pantry.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">React</span>
+              <span class="tag-small">Next.js</span>
+              <span class="tag-small">JavaScript</span>
+              <span class="tag-small">Firebase</span>
+              <span class="tag-small">Vercel</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/Inventory-Management"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://youtu.be/XJ7RQF05Krs"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-card project-extra" hidden>
+          <p class="project-year">2024</p>
+          <h3 class="project-title">Breakout Game</h3>
+          <p class="project-desc">
+            A classic arcade game of Breakout in which the user needs to clear a
+            collection of bricks by hitting each of them with a bouncing ball.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Java</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/Breakout-Game"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://youtu.be/YyoGGWhyg34"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-card project-extra" hidden>
+          <p class="project-year">2024</p>
+          <h3 class="project-title">Weather App</h3>
+          <p class="project-desc">
+            A weather app that provides adaptive displays based on current
+            weather conditions fetched from the weather API.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Java</span>
+              <span class="tag-small">Weather API</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/Weather-Display"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-card project-extra" hidden>
+          <p class="project-year">2023</p>
+          <h3 class="project-title">Hangman Game</h3>
+          <p class="project-desc">
+            A classic hangman game in which the user must guess the hidden word
+            before they run out of attempts. This project was implemented as a
+            final project for my COMP 123 class: Core Concepts of Computer
+            Science.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Python</span>
+              <span class="tag-small">Tkinter</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/RamatoulayeBah28/Hangman-Game"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+              <a
+                href="https://youtu.be/Xzhpl5OSJPk"
+                target="_blank"
+                class="project-link"
+                >Demo →</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-card project-extra" hidden>
+          <p class="project-year">2023</p>
+          <h3 class="project-title">Project Beauty</h3>
+          <p class="project-desc">
+            Youth Social Entrepreneurship initiative promoting inclusion through
+            a fashion website giving underrepresented models a space to share
+            their stories. Won three awards at the final pitch.
+          </p>
+          <div class="project-footer">
+            <div class="project-tags-small">
+              <span class="tag-small">Content Creation</span>
+              <span class="tag-small">Social Media</span>
+              <span class="tag-small">Social Entrepreneurship</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://www.instagram.com/projectbeauty.nl/"
+                target="_blank"
+                class="project-link"
+                >Instagram →</a
+              >
+              <a
+                href="https://ziaowens.wixsite.com/project-beauty/"
+                target="_blank"
+                class="project-link"
+              >
+                Live →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-more-wrap">
+        <button
+          class="btn-outline projects-toggle"
+          onclick="toggleProjects(this)"
+        >
+          See More <span class="toggle-arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ABOUT (04) -->
+    <section id="about">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-left">
           <p>
-            Junior at Macalester College pursuing a Bachelor of Arts Degree in Computer
-            Science and Linguistics with a minor in Spanish. Of French
-            nationality and Guinean origin, I thrive to have a positive impact
-            on my communities and I hope to use technology and the skills I
-            foster daily as tools to achieve this goal. I am passionate about
-            tech, soccer, languages, social justice, and discovering new
-            things every day!
+            I'm a rising senior at Macalester College graduating in May 2027
+            double-majoring in Computer Science and Linguistics with a minor in
+            Spanish. I've lived in France, the Netherlands, Scotland and the
+            U.S.
+          </p>
+          <div class="about-identity">
+            <div class="identity-item">
+              <span class="identity-icon"
+                ><i
+                  class="fa-solid fa-location-dot"
+                  style="color: var(--accent)"
+                ></i
+              ></span>
+              Based in St. Paul, MN
+            </div>
+            <div class="identity-item">
+              <span class="identity-icon"
+                ><i class="fa-solid fa-futbol" style="color: var(--accent)"></i
+              ></span>
+              Student-athlete on the Macalester Women's Soccer Team
+            </div>
+            <div class="identity-item">
+              <span class="identity-icon"
+                ><i
+                  class="fa-solid fa-language"
+                  style="color: var(--accent)"
+                ></i
+              ></span>
+              French, English, Spanish &amp; Jakhanké - Learning Fulani &amp;
+              Arabic
+            </div>
+            <div class="identity-item">
+              <span class="identity-icon"
+                ><i
+                  class="fa-solid fa-earth-europe"
+                  style="color: var(--accent)"
+                ></i
+              ></span>
+              UWC Davis Scholar (United World College Maastricht '23)
+            </div>
+            <div class="identity-item">
+              <span class="identity-icon"
+                ><i
+                  class="fa-solid fa-puzzle-piece"
+                  style="color: var(--accent)"
+                ></i
+              ></span>
+              Puzzle &amp; LEGO enthusiast
+            </div>
+          </div>
+        </div>
+        <div class="about-story">
+          <h3>Why CS &amp; Linguistics?</h3>
+          <p>
+            Language holds so much power in society. As our number one tool for
+            communication, the lack of access to a language can exacerbate
+            exclusion, inequality and division. I believe tech can reduce these
+            challenges if implemented alongside communities, whether it's in the
+            preservation of endangered languages, increasing LLM training on
+            low-resource languages, enhancing accessible language learning
+            tools, or simply connecting people with a shared passion.
+          </p>
+
+          <h3>Beyond the Screen</h3>
+          <p>
+            I thrive to keep learning in this always evolving industry. It can
+            be overwhelming seeing the demands for software engineering jobs
+            from knowing React, Next.js, TypeScript, Tailwind CSS to Docker,
+            SQL, RESTful and Agile practices without forgetting cloud platforms
+            and an understanding of AI... However, I've now learned that the
+            real growth happens when stepping out of tutorial hell and building
+            solutions to real world problems I care about.
           </p>
         </div>
       </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-  </section>
-  <section id="experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Experience</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="block-info">
-          <h2 class="experience-sub-title">Backend Development</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Java</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Python</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>C</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Node JS</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>SQL</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Material UI</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>C#</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-          </div>
+    </section>
+
+    <!-- SKILLS (05) -->
+    <section class="skills-section">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Frontend</h4>
+          <ul class="skill-list">
+            <li>React</li>
+            <li>Next.js</li>
+            <li>TypeScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Tailwind CSS</li>
+            <li>Bootstrap</li>
+            <li>Vue.js</li>
+            <li>Material UI</li>
+          </ul>
         </div>
-        <div class="block-info">
-          <h2 class="experience-sub-title">Frontend Development</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>HTML</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>CSS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>JavaScript</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>TypeScript</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>React</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Next JS</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Git</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Swift</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Vue JS</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-          </div>
+        <div class="skill-group">
+          <h4>Backend &amp; Data</h4>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li>Java</li>
+            <li>Node.js</li>
+            <li>SQL</li>
+            <li>Firebase</li>
+            <li>Supabase</li>
+            <li>C</li>
+            <li>R</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4>Tools</h4>
+          <ul class="skill-list">
+            <li>Git</li>
+            <li>Figma</li>
+            <li>Vercel</li>
+            <li>Convex</li>
+            <li>Stripe</li>
+            <li>Pinecone</li>
+            <li>OpenAI API</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4>Other</h4>
+          <ul class="skill-list">
+            <li>NLP</li>
+            <li>Swift - iOS</li>
+            <li>Unity - C#</li>
+          </ul>
         </div>
       </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-  </section>
-  <section id="projects">
-    <p class="section__text__p1" style="  margin-left: 80px;">Browse My Recent</p>
-    <h1 class="title" style="  margin-left: 80px;">Projects</h1>
+    </section>
 
-    <!-- Categories -->
-    <div id="myBtnContainer">
-      <button class="btn btn-color-2 project-btn active" onclick="filterProjects('all')">
-        Show all
-      </button>
-      <button class="btn btn-color-2 project-btn" onclick="filterProjects('artificial')">
-        AI Projects
-      </button>
-      <button class="btn btn-color-2 project-btn" onclick="filterProjects('web')">
-        Web Apps
-      </button>
-      <button class="btn btn-color-2 project-btn" onclick="filterProjects('games')">
-        Game Dev
-      </button>
-      <button class="btn btn-color-2 project-btn" onclick="filterProjects('others')">
-        Other Projects
-      </button>
-    </div>
-    <div class="project-details-container">
-      <div class="about-containers-project">
-
-        <!-- AI Chatbot -->
-        <div class="details-container color-container artificial">
-          <div class="article-container">
-            <img src="./assets/projects/ai-customer-support.png" alt="Project 1" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">
-            AI Customer Support Chatbot
-          </h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/AI-Customer-Support'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-ai-customer-support">
-              View Details
-            </button> 
-            <div id="modal-ai-customer-support" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>A sustainable water use consultant connected to the WaterWise website enabling users to get instant support and answers to questions about the website’s features and water conservation tips | <strong>React, JavaScript, CSS, Together AI API, Vercel</strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://waterwise-wateruseconsultant-chat.vercel.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <!-- AI Flashcards Generator -->
-        <div class="details-container color-container artificial">
-          <div class="article-container">
-            <img src="./assets/projects/ai-flashcard.png" alt="Project 2" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">
-            AI Flashcards Generator
-          </h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/Flashcard-AI'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-ai-flashcards">
-              View Details
-            </button> 
-            <div id="modal-ai-flashcards" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Dynamic set of AI-driven flashcards to help users study by generating topic-specific questions and answers with an implemented pay wall | <strong>React, Next.js, Stripe, JavaScript, OpenAI, Vercel</strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://www.youtube.com/watch?v=JzzsYHl7RU4'">
-              Live Demo
-            </button>
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <p class="contact-eyebrow">Let's talk</p>
+      <h2 class="contact-heading">Got something<br /><em>interesting?</em></h2>
+      <p class="contact-sub">
+        I'm open to new grad SWE roles, collaborations on civic tech and/or fun
+        project ideas. Reach out!
+      </p>
+      <div class="contact-links">
+        <a href="mailto:Ramatoulaye.bah2805@gmail.com" class="btn-primary"
+          >Email me</a
+        >
+        <a
+          href="https://www.linkedin.com/in/ramatoulaye-bah-aa8b4a271/"
+          target="_blank"
+          class="btn-outline"
+          >LinkedIn</a
+        >
+        <a
+          href="https://github.com/RamatoulayeBah28"
+          target="_blank"
+          class="btn-outline"
+          >GitHub</a
+        >
       </div>
-    </div>
+    </section>
 
-    <!-- AI Task Manager Web App -->
-        <div class="details-container color-container artificial web">
-          <div class="article-container">
-            <img src="./assets/projects/todos.png" alt="convex to-do list" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">AI Task Manager Web App</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/convex-todos'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-task-manager">
-              View Details
-            </button> 
-            <div id="modal-task-manager" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>An efficient to-do list web app that allows the user to manage their tasks with features like user authentication and a touch of AI to enhance the task management experience (e.g. task suggestions and effective title and description generator) | <strong>React, Next.js, Tailwind CSS, TypeScript, Convex, Clerk, OpenRouter</strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/8kGR4PHDQjI'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <!-- AI Rate My Professor -->
-        <div class="details-container color-container artificial">
-          <div class="article-container">
-            <img src="./assets/projects/ai-rmp.png" alt="Project 3" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">
-            AI Rate My Professor Assistant
-          </h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/AI-Rate-My-Professor'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-ai-rate-my-professor">
-              View Details
-            </button> 
-            <div id="modal-ai-rate-my-professor" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>A Rate My Professor chatbot assistant that provides a streamlined and focused search experience, allowing users to filter through professors based on specific criteria such as ratings, student reviews, and department | <strong>React, Next.js, Python, Pinecone Database, OpenAI, Vercel</strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/avh-w1ZEI1Q'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <!-- SmartPrint -->
-        <div class="details-container color-container web">
-          <div class="article-container">
-            <img src="./assets/projects/10.png" alt="Project 1" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">
-            SmartPrint: Your ChatGPT Footprint
-          </h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/ChatGPT-Report'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-smartprint">
-              View Details
-            </button> 
-            <div id="modal-smartprint" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> A web app that allows the user to upload their ChatGPT data and produces a personalized report based on usage and its environmental impact, as part of the Macalester College 24-hour Hackathon (Finalists) | <strong>React, Next.js, CSS, JavaScript, </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://www.canva.com/design/DAGV_hiHY2c/bebHwhPHDRg2LKoeUfT9xg/view?utm_content=DAGV_hiHY2c&utm_campaign=designshare&utm_medium=link&utm_source=editor'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container web">
-          <div class="article-container">
-            <img src="./assets/projects/11.png" alt="Project 3" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">
-            Binge Eating Disorder Indicator Quiz
-          </h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/recoverCareQuiz'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-rcare">
-              View Details
-            </button> 
-            <div id="modal-rcare" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>  Contributed to R.care (YC W21)’s backlog by developing a Binge Eating Disorder Indicator web app quiz to raise awareness around EDs and allow users to do an initial certified self-assessment | <strong>React, Next.js, Figma Prototyping, JavaScript, CSS, Firebase, Stripe </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://youtu.be/_E7Rl4ZosW4?si=gTxvmgdyCdgbzZuo'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container web">
-          <div class="article-container">
-            <img src="./assets/projects/2.png" alt="Project 2" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Water Tracker</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/WaterWise'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-waterwise">
-              View Details
-            </button> 
-            <div id="modal-waterwise" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> An educational website that helps users track their daily water consumption by providing a score based on their usage alongside resources on water conservation | <strong>HTML, CSS, JavaScript </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://waterwise-watersustainability.netlify.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container web">
-          <div class="article-container">
-            <img src="./assets/projects/1.png" alt="Project 1" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Pantry Tracker</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/Inventory-Management'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-pantry-tracker">
-              View Details
-            </button> 
-            <div id="modal-pantry-tracker" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> A simple inventory management web app that allows the user to add, filter and delete items from a digital pantry | <strong>React, Next.js, JavaScript, Vercel, Firebase </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/XJ7RQF05Krs'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-          <div class="details-container color-container web">
-          <div class="article-container">
-            <img src="./assets/projects/12.png" alt="Project LingoHub" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">LingoHub</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/LingoHub'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-lingohub">
-              View Details
-            </button> 
-            <div id="modal-lingohub" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> LingoHub is a modern social platform designed for language enthusiasts to connect, share experiences, and learn from each other | <strong>React, Next.js, JavaScript, HTML, CSS </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://lingo-hub.vercel.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container others">
-          <div class="article-container">
-            <img src="./assets/projects/3.png" alt="Project 3" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Weather App</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/Weather-Display'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-weather-app">
-              View Details
-            </button> 
-            <div id="modal-weather-app" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> a weather app that provides adaptive displays best on current weather conditions fetched from the weather API | <strong>Java, Weather API </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/Weather-Display'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container others">
-          <div class="article-container">
-            <img src="./assets/projects/social.png" alt="Project 9" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Social Network</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/Social-Network-Visualizer'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-tenet">
-              View Details
-            </button> 
-            <div id="modal-tenet" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> This project implements a social network analysis and visualization tool. Using a dataset of user connections, the program is able to analyze connections between two users and assign a weight based on how they are connected to each other. It also assigns users a page rank score that tells them how “popular” they are within a circle of people and display the top 5 users on an interactive leaderboard | <strong>Data Structures, Graph Theory, Java, PageRank Algorithm  </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://www.canva.com/design/DAGZBR382TA/TeXhgAuhA7Byf-t99d-62w/view?utm_content=DAGZBR382TA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4fa6c01fd4'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container others">
-          <div class="article-container">
-            <img src="./assets/projects/travinder.png" alt="Project 9" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Travinder</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/Travinder'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-travinder">
-              View Details
-            </button> 
-            <div id="modal-travinder" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> Travinder is an app that allows the user to match with a travel destination. Think dating app meets travel agent and you get Travinder! | <strong>Swift, Xcode  </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/Travinder'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container others">
-          <div class="article-container">
-            <img src="./assets/projects/7.png" alt="Project 7" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Project Beauty</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://www.instagram.com/projectbeauty.nl/'">
-              Instagram
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-project-beauty">
-              View Details
-            </button> 
-            <div id="modal-project-beauty" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> A Youth Social Entrepreneurship initiative to promote inclusion and deconstruct beauty standards through a fashion website that gives underrepresented models a space to tell their personal stories while showcasing a style that is true to their identity and inspiring to others. My team and I additionally partnered with local thrift shops to promote sustainability and avoid fast fashion. From the creation of the logo to the final pitch, we won three awards worth a hundred euros each | <strong>Content Creation, Social Media, Social Entrepreneurship </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://ziaowens.wixsite.com/project-beauty/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-         <div class="details-container color-container others">
-          <div class="article-container">
-            <img src="./assets/projects/9.png" alt="Project algo" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Sorting Visualizer</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/AlgoFinalProject'">
-              GitHub
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-algo-visualizer">
-              View Details
-            </button> 
-            <div id="modal-algo-visualizer" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> This final algortithm project shows the animation of three common sorting algorithms - merge sort, quicksort, and heap sort. Through colors and animated movements it provides a clear visualization of how the sorting methods work. | <strong>Python, Tkinter, Algorithm  </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://youtu.be/fvPdx_Jq39U'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container games">
-          <div class="article-container">
-            <img src="./assets/projects/4.png" alt="Project 1" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">
-            A Squirrel's Tail
-          </h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/CupidJam'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-squirrel">
-              View Details
-            </button> 
-            <div id="modal-squirrel" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> a Valentine’s Day themed platform game made under 48 hours as part of the first Macalester College Game Jam | <strong>PyGame, Python, Canva </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/M0sl7HwaKJ8'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container games">
-          <div class="article-container">
-            <img src="./assets/projects/6.png" alt="Project 1" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Fashion Famous</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/Fashion-Famous'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-fashion-famous">
-              View Details
-            </button> 
-            <div id="modal-fashion-famous" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> An interactive fashion dress-up game inspired by the Roblox game Dress To Impress that allows the user to pick clothes based on a pre-defined theme and compare the final look to the jury's pick | <strong>Java, Kilt Graphic Library, Canva </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://www.canva.com/design/DAGDPwfvXMc/ywJk-ZEbVqjaGZBA65hLhw/view?utm_content=DAGDPwfvXMc&utm_campaign=designshare&utm_medium=link&utm_source=editor'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container games">
-          <div class="article-container">
-            <img src="./assets/projects/5.png" alt="Project 1" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Hangman Game</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/Hangman-Game'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-hangman">
-              View Details
-            </button> 
-            <div id="modal-hangman" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> A classic hangman game in which the user must guess the hidden word before they run out of attempts. This project was implemented as a final project for my COMP 123 class: Core Concepts of Computer Science. We worked in groups in order to accomplish our first-ever CS game | <strong>Python, Tkinter</strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/Xzhpl5OSJPk'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-         
-        <div class="details-container color-container games">
-          <div class="article-container">
-            <img src="./assets/projects/8.png" alt="Project 8" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Breakout Game</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/Breakout-Game'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-breakout">
-              View Details
-            </button> 
-            <div id="modal-breakout" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> A classic arcade game of Breakout in which the user needs to clear a collection of bricks by hitting each of them with a bouncing ball | <strong>Java</strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/YyoGGWhyg34'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container games">
-          <div class="article-container">
-            <img src="./assets/projects/geocipher.png" alt="Project GeoCipher" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">
-            GeoCipher
-          </h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/RamatoulayeBah28/GeoCipher'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" data-modal="modal-cipher">
-              View Details
-            </button> 
-            <div id="modal-cipher" class="modal">
-              Modal content 
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p> a digital escape room to learn about countries by uncovering hidden clues
- as part of the software dev class final project | <strong>Unity, C# </strong></p>
-              </div>
-            </div> 
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://docs.google.com/presentation/d/1XnishQUYQrABHwmsFnGCX7CUcVAv9RoxGjls2bNyWXg/edit?slide=id.gc6f80d1ff_0_27&pli=1#slide=id.gc6f80d1ff_0_27'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-      </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
-  </section>
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p>
-          <a href="mailto:Ramatoulaye.bah2805@gmail.com">Ramatoulaye.bah2805@gmail.com</a>
-        </p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p>
-          <a href="https://www.linkedin.com/in/ramatoulaye-bah-aa8b4a271/">LinkedIn</a>
-        </p>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <p>Copyright &#169; 2025 Ramatoulaye Bah. All Rights Reserved.</p>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js"></script>
-</body>
-
+    <footer>
+      <p>© 2026 Ramatoulaye Bah. All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>
