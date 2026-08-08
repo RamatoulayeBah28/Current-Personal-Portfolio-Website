@@ -1,7 +1,9 @@
 function toggleProjects(btn) {
-  const extras = document.querySelectorAll('.project-extra');
+  const extras = document.querySelectorAll(".project-extra");
   const expanded = !extras[0].hidden;
-  extras.forEach(el => { el.hidden = expanded; });
+  extras.forEach((el) => {
+    el.hidden = expanded;
+  });
   btn.innerHTML = expanded
     ? 'See More <span class="toggle-arrow">↓</span>'
     : 'See Less <span class="toggle-arrow">↑</span>';
@@ -15,15 +17,16 @@ function toggleMenu() {
 }
 filterProjects("all");
 function filterProjects(c) {
-  
   if (c == "all") c = "";
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (let element of document.getElementsByClassName("details-container color-container")) {
+  for (let element of document.getElementsByClassName(
+    "details-container color-container",
+  )) {
     element.classList.remove("show");
     if (element.className.indexOf(c) > -1) {
       element.classList.add("show");
     }
-  }  
+  }
 }
 
 // Add active class to the current button (highlight it)
@@ -38,7 +41,80 @@ if (btnContainer) {
     });
   }
 }
+(function () {
+  var section = document.getElementById("work");
+  var tabs = Array.from(section.querySelectorAll(".featured-tab"));
+  var panels = Array.from(section.querySelectorAll(".featured-panel"));
+  var current = 0;
+  var timer = null;
+  var ROTATE_MS = 5000;
+  var reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  var mouseX = -1,
+    mouseY = -1;
 
+  function isHovering() {
+    if (mouseX < 0) return false;
+    var r = section.getBoundingClientRect();
+    return (
+      mouseX >= r.left &&
+      mouseX <= r.right &&
+      mouseY >= r.top &&
+      mouseY <= r.bottom
+    );
+  }
+
+  function show(index) {
+    current = index;
+    tabs.forEach(function (t, i) {
+      var active = i === index;
+      t.classList.toggle("active", active);
+      t.setAttribute("aria-selected", active);
+      var bar = t.querySelector(".featured-tab-progress span");
+      bar.classList.remove("running");
+      void bar.offsetWidth;
+      if (active && !reduceMotion) bar.classList.add("running");
+    });
+    panels.forEach(function (p, i) {
+      p.classList.toggle("active", i === index);
+    });
+  }
+
+  function tick() {
+    var focusedInside =
+      section.contains(document.activeElement) &&
+      document.activeElement !== section;
+    var paused = isHovering() || focusedInside;
+    section.classList.toggle("rotation-paused", paused);
+    if (!paused) show((current + 1) % tabs.length);
+  }
+
+  function startTimer() {
+    if (reduceMotion) return;
+    if (timer) clearInterval(timer);
+    timer = setInterval(tick, ROTATE_MS);
+  }
+
+  document.addEventListener(
+    "mousemove",
+    function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    },
+    { passive: true },
+  );
+
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener("click", function () {
+      show(i);
+      startTimer();
+    });
+  });
+
+  show(0);
+  startTimer();
+})();
 // View Details Container
 // function viewDetails(modalId, btnId) {
 //   // Get the modal
@@ -97,7 +173,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
 
 // (function ($) {
 //   var $window = $(window),

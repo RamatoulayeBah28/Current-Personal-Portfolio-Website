@@ -282,52 +282,93 @@
         <h2 class="section-title">Other Projects</h2>
         <div class="section-line"></div>
       </div>
-
       <div class="projects-grid">
-        <div class="project-card">
-          <p class="project-year">2026</p>
-          <h3 class="project-title">Lock The Code</h3>
-          <p class="project-desc">
-            Full-stack SaaS for technical interview prep. Uses SM-2 spaced
-            repetition to schedule problem reviews, an AI tutor (Claude Opus
-            4.8) that coaches via the Socratic method, and a mock interviewer
-            that simulates real interviews with a countdown timer and structured
-            feedback. Includes Stripe billing with free trial, webhook-backed
-            Pro status, and Clerk auth.
-          </p>
-          <div class="project-footer">
-            <div class="project-tags-small">
-              <span class="tag-small">Next.js</span>
-              <span class="tag-small">FastAPI</span>
-              <span class="tag-small">PostgreSQL</span>
-              <span class="tag-small">TypeScript</span>
-              <span class="tag-small">Python</span>
-              <span class="tag-small">Pydantic</span>
-              <span class="tag-small">Stripe</span>
-              <span class="tag-small">Clerk</span>
-              <span class="tag-small">Claude API</span>
-              <span class="tag-small">Tailwind CSS</span>
-              <span class="tag-small">Railway</span>
-              <span class="tag-small">Vercel</span>
+        <!-- LOCK THE CODE — FEATURED PROJECT -->
+        <article class="project-card project-card-featured">
+          <div class="project-featured-layout">
+            <div class="project-featured-brand">
+              <img
+                src="./assets/lock-the-code-logo copy.png"
+                alt="Lock The Code logo"
+                class="project-logo"
+              />
+              <div>
+                <p class="project-year">2026 · Founder</p>
+                <p class="project-kicker">
+                  Adaptive technical interview preparation platform
+                </p>
+              </div>
             </div>
-            <div class="project-links">
-              <a
-                href="https://github.com/RamatoulayeBah28/lock-the-code"
-                target="_blank"
-                class="project-link"
-                >GitHub →</a
-              >
-              <a
-                href="https://lockthecode.net"
-                target="_blank"
-                class="project-link"
-                >Live →</a
-              >
+            <div class="project-featured-content">
+              <p class="project-desc">
+                Full-stack interview preparation platform built around
+                personalized spaced repetition. Lock The Code tracks what what
+                you already know, identifies weak areas, and determines when
+                each problem or flashcard should be studied next so you never
+                forget right before an interview.
+              </p>
+              <div class="project-tech-highlights">
+                <div class="tech-highlight">
+                  <span class="tech-highlight-label">Architecture</span>
+                  <span class="tech-highlight-value">
+                    Next.js, FastAPI, PostgreSQL
+                  </span>
+                </div>
+                <div class="tech-highlight">
+                  <span class="tech-highlight-label">Learning Algorithm</span>
+                  <span class="tech-highlight-value">
+                    SM-2 spaced repetition
+                  </span>
+                </div>
+                <div class="tech-highlight">
+                  <span class="tech-highlight-label">AI</span>
+                  <span class="tech-highlight-value">
+                    Claude-powered tutor, flashcards &amp; mock interviews
+                  </span>
+                </div>
+                <div class="tech-highlight">
+                  <span class="tech-highlight-label">Infrastructure</span>
+                  <span class="tech-highlight-value">
+                    Docker · Webhooks · CI/CD
+                  </span>
+                </div>
+              </div>
+              <div class="project-featured-tags">
+                <span class="tag-small">Next.js</span>
+                <span class="tag-small">TypeScript</span>
+                <span class="tag-small">FastAPI</span>
+                <span class="tag-small">PostgreSQL</span>
+                <span class="tag-small">Claude API</span>
+                <span class="tag-small">Clerk</span>
+                <span class="tag-small">Stripe</span>
+                <span class="tag-small">Docker</span>
+              </div>
+              <div class="project-featured-footer">
+                <span class="project-status">
+                  70+ early users · Free trial & monthly subscribing customers
+                </span>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/RamatoulayeBah28/lock-the-code"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    GitHub →
+                  </a>
+                  <a
+                    href="https://lockthecode.net"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    Live →
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="project-card">
+        </article>
+        <!-- LINGOHUB -->
+        <article class="project-card">
           <p class="project-year">2025</p>
           <h3 class="project-title">LingoHub</h3>
           <p class="project-desc">
@@ -348,24 +389,27 @@
                 href="https://github.com/RamatoulayeBah28/LingoHub"
                 target="_blank"
                 class="project-link"
-                >GitHub →</a
               >
+                GitHub →
+              </a>
               <a
                 href="https://lingo-hub.vercel.app/"
                 target="_blank"
                 class="project-link"
-                >Live →</a
               >
+                Live →
+              </a>
             </div>
           </div>
-        </div>
-        <div class="project-card">
+        </article>
+        <!-- SMARTPRINT -->
+        <article class="project-card">
           <p class="project-year">2025</p>
           <h3 class="project-title">SmartPrint: Your ChatGPT Footprint</h3>
           <p class="project-desc">
-            Hackathon finalist (24 hrs). Upload your ChatGPT data export and
-            receive a personalized report on usage patterns and environmental
-            footprint.
+            Hackathon finalist built in 24 hours. Upload a ChatGPT data export
+            and receive a personalized report analyzing usage patterns and
+            environmental footprint.
           </p>
           <div class="project-footer">
             <div class="project-tags-small">
@@ -380,26 +424,27 @@
                 href="https://github.com/RamatoulayeBah28/ChatGPT-Report"
                 target="_blank"
                 class="project-link"
-                >GitHub →</a
               >
+                GitHub →
+              </a>
               <a
                 href="https://www.canva.com/design/DAGV_hiHY2c/bebHwhPHDRg2LKoeUfT9xg/view?utm_content=DAGV_hiHY2c&utm_campaign=designshare&utm_medium=link&utm_source=editor"
                 target="_blank"
                 class="project-link"
-                >Demo →</a
               >
+                Demo →
+              </a>
             </div>
           </div>
-        </div>
-
-        <div class="project-card">
+        </article>
+        <!-- SOCIAL NETWORK VISUALIZER -->
+        <article class="project-card">
           <p class="project-year">2024</p>
           <h3 class="project-title">Social Network Visualizer</h3>
           <p class="project-desc">
-            Data Structures final project. Built a social network analysis tool
-            that computes relationship weights between users, implements
-            Google's PageRank algorithm to rank influence, and renders an
-            interactive graph where you can click nodes to explore connections
+            Data Structures final project that computes relationship weights
+            between users, implements Google's PageRank algorithm to rank
+            influence, and renders an interactive graph with node exploration
             and a top-5 leaderboard.
           </p>
           <div class="project-footer">
@@ -414,25 +459,27 @@
                 href="https://github.com/RamatoulayeBah28/Social-Network-Visualizer"
                 target="_blank"
                 class="project-link"
-                >GitHub →</a
               >
+                GitHub →
+              </a>
               <a
                 href="https://www.canva.com/design/DAGZBR382TA/TeXhgAuhA7Byf-t99d-62w/view?utm_content=DAGZBR382TA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4fa6c01fd4"
                 target="_blank"
                 class="project-link"
-                >Demo →</a
               >
+                Demo →
+              </a>
             </div>
           </div>
-        </div>
-
-        <div class="project-card">
+        </article>
+        <!-- AI TASK MANAGER -->
+        <article class="project-card">
           <p class="project-year">2024</p>
           <h3 class="project-title">AI Task Manager</h3>
           <p class="project-desc">
             Full-stack to-do app with user authentication, AI-powered task
-            suggestions, and smart title/description generation. Built with
-            real-time sync via Convex.
+            suggestions, and smart title and description generation. Built with
+            real-time synchronization through Convex.
           </p>
           <div class="project-footer">
             <div class="project-tags-small">
@@ -446,36 +493,34 @@
                 href="https://github.com/RamatoulayeBah28/convex-todos"
                 target="_blank"
                 class="project-link"
-                >GitHub →</a
               >
+                GitHub →
+              </a>
               <a
                 href="https://youtu.be/8kGR4PHDQjI"
                 target="_blank"
                 class="project-link"
-                >Demo →</a
               >
+                Demo →
+              </a>
             </div>
           </div>
-        </div>
-
-        <div class="project-card">
+        </article>
+        <!-- BINGE EATING DISORDER INDICATOR -->
+        <article class="project-card">
           <p class="project-year">2024</p>
           <h3 class="project-title">
             Binge Eating Disorder Indicator Quiz App
           </h3>
           <p class="project-desc">
-            Contributed to R.care (YC W21)'s product backlog with a certified
-            initial self-assessment quiz using Firebase as a database, Stripe
-            paywall, and personalized recovery plans.
+            Contributed to R.care's product backlog with a multi-step
+            self-assessment quiz, Firebase-backed results, personalized recovery
+            plans, and a Stripe paywall.
           </p>
           <div class="project-footer">
             <div class="project-tags-small">
               <span class="tag-small">React</span>
               <span class="tag-small">Next.js</span>
-              <span class="tag-small">Figma</span>
-
-              <span class="tag-small">JavaScript</span>
-
               <span class="tag-small">Firebase</span>
               <span class="tag-small">Stripe</span>
               <span class="tag-small">Bootstrap</span>
@@ -485,25 +530,27 @@
                 href="https://github.com/RamatoulayeBah28/recoverCareQuiz"
                 target="_blank"
                 class="project-link"
-                >GitHub →</a
               >
+                GitHub →
+              </a>
               <a
                 href="https://youtu.be/_E7Rl4ZosW4?si=gTxvmgdyCdgbzZuo"
                 target="_blank"
                 class="project-link"
-                >Demo →</a
               >
+                Demo →
+              </a>
             </div>
           </div>
-        </div>
-
-        <div class="project-card">
+        </article>
+        <!-- AI FLASHCARD GENERATOR -->
+        <article class="project-card">
           <p class="project-year">2024</p>
           <h3 class="project-title">AI Flashcard Generator</h3>
           <p class="project-desc">
-            AI-driven flashcard app that generates topic-specific Q&amp;A sets
-            for studying. Includes a Stripe paywall and user accounts, deployed
-            on Vercel.
+            AI-driven flashcard application that generates topic-specific
+            question-and-answer sets for studying. Includes user accounts,
+            Stripe payments, and Vercel deployment.
           </p>
           <div class="project-footer">
             <div class="project-tags-small">
@@ -516,26 +563,27 @@
                 href="https://github.com/RamatoulayeBah28/Flashcard-AI"
                 target="_blank"
                 class="project-link"
-                >GitHub →</a
               >
+                GitHub →
+              </a>
               <a
                 href="https://www.youtube.com/watch?v=JzzsYHl7RU4"
                 target="_blank"
                 class="project-link"
-                >Demo →</a
               >
+                Demo →
+              </a>
             </div>
           </div>
-        </div>
-
-        <div class="project-card">
+        </article>
+        <!-- AI RATE MY PROFESSOR -->
+        <article class="project-card">
           <p class="project-year">2024</p>
           <h3 class="project-title">AI Rate My Professor</h3>
           <p class="project-desc">
-            A Rate My Professor chatbot assistant that provides a streamlined
-            and focused search experience, allowing users to filter through
-            professors based on specific criteria such as ratings, student
-            reviews, and department.
+            AI-powered Rate My Professor assistant that streamlines professor
+            discovery and lets users filter results by ratings, reviews,
+            department, and other criteria.
           </p>
           <div class="project-footer">
             <div class="project-tags-small">
@@ -543,7 +591,7 @@
               <span class="tag-small">Next.js</span>
               <span class="tag-small">Python</span>
               <span class="tag-small">OpenAI</span>
-              <span class="tag-small">Pinecone Database</span>
+              <span class="tag-small">Pinecone</span>
               <span class="tag-small">Vercel</span>
             </div>
             <div class="project-links">
@@ -551,32 +599,34 @@
                 href="https://github.com/RamatoulayeBah28/AI-Rate-My-Professor"
                 target="_blank"
                 class="project-link"
-                >GitHub →</a
               >
+                GitHub →
+              </a>
               <a
                 href="https://youtu.be/avh-w1ZEI1Q"
                 target="_blank"
                 class="project-link"
-                >Demo →</a
               >
+                Demo →
+              </a>
             </div>
           </div>
-        </div>
-
-        <div class="project-card">
+        </article>
+        <!-- AI CUSTOMER SUPPORT -->
+        <article class="project-card">
           <p class="project-year">2024</p>
           <h3 class="project-title">AI Customer Support Chatbot</h3>
           <p class="project-desc">
-            A sustainable water use consultant connected to the WaterWise
-            website enabling users to get instant support and answers to
-            questions about the website’s features and water conservation tips.
+            AI-powered sustainable water-use consultant connected to the
+            WaterWise website, providing instant answers about product features
+            and water conservation.
           </p>
           <div class="project-footer">
             <div class="project-tags-small">
               <span class="tag-small">React</span>
               <span class="tag-small">Next.js</span>
               <span class="tag-small">JavaScript</span>
-              <span class="tag-small">Together AI API</span>
+              <span class="tag-small">Together AI</span>
               <span class="tag-small">Vercel</span>
             </div>
             <div class="project-links">
@@ -584,46 +634,48 @@
                 href="https://github.com/RamatoulayeBah28/AI-Customer-Support"
                 target="_blank"
                 class="project-link"
-                >GitHub →</a
               >
+                GitHub →
+              </a>
               <a
                 href="https://waterwise-wateruseconsultant-chat.vercel.app/"
                 target="_blank"
                 class="project-link"
-                >Live →</a
               >
+                Live →
+              </a>
             </div>
           </div>
-        </div>
-
+        </article>
+        <!-- EXISTING EXTRA PROJECTS REMAIN BELOW THIS POINT -->
         <div class="project-card project-extra" hidden>
           <p class="project-year">2025</p>
           <h3 class="project-title">Sorting Visualizer</h3>
           <p class="project-desc">
-            This final algortithm project shows the animation of three common
-            sorting algorithms - merge sort, quicksort, and heap sort. Through
-            colors and animated movements it provides a clear visualization of
-            how the sorting methods work.
+            This final algorithm project shows the animation of three common
+            sorting algorithms — merge sort, quicksort, and heap sort.
           </p>
           <div class="project-footer">
             <div class="project-tags-small">
               <span class="tag-small">Python</span>
               <span class="tag-small">Tkinter</span>
-              <span class="tag-small">Algorithm</span>
+              <span class="tag-small">Algorithms</span>
             </div>
             <div class="project-links">
               <a
                 href="https://github.com/RamatoulayeBah28/AlgoFinalProject"
                 target="_blank"
                 class="project-link"
-                >GitHub →</a
               >
+                GitHub →
+              </a>
               <a
                 href="https://youtu.be/fvPdx_Jq39U"
                 target="_blank"
                 class="project-link"
-                >Demo →</a
               >
+                Demo →
+              </a>
             </div>
           </div>
         </div>
@@ -1009,7 +1061,8 @@
             SQL, RESTful and Agile practices without forgetting cloud platforms
             and an understanding of AI... However, I've now learned that the
             real growth happens when stepping out of tutorial hell and building
-            solutions to real world problems I care about.
+            solutions to real world problems I care about regardless of the tech
+            stack.
           </p>
         </div>
       </div>
@@ -1025,50 +1078,77 @@
 
       <div class="skills-grid">
         <div class="skill-group">
+          <h4>Languages</h4>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li>Java</li>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
           <h4>Frontend</h4>
           <ul class="skill-list">
             <li>React</li>
             <li>Next.js</li>
-            <li>TypeScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>Vue 2</li>
             <li>Tailwind CSS</li>
             <li>Bootstrap</li>
-            <li>Vue.js</li>
-            <li>Material UI</li>
+            <li>Material-UI</li>
+            <li>Vite</li>
           </ul>
         </div>
+
         <div class="skill-group">
           <h4>Backend &amp; Data</h4>
           <ul class="skill-list">
-            <li>Python</li>
-            <li>Java</li>
             <li>Node.js</li>
-            <li>SQL</li>
-            <li>Firebase</li>
+            <li>FastAPI</li>
+            <li>PostgreSQL</li>
+            <li>Firebase Firestore</li>
             <li>Supabase</li>
-            <li>C</li>
-            <li>R</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h4>Tools</h4>
-          <ul class="skill-list">
-            <li>Git</li>
-            <li>Figma</li>
-            <li>Vercel</li>
             <li>Convex</li>
-            <li>Stripe</li>
-            <li>Pinecone</li>
-            <li>OpenAI API</li>
+            <li>RESTful APIs</li>
           </ul>
         </div>
+
         <div class="skill-group">
-          <h4>Other</h4>
+          <h4>Cloud &amp; DevOps</h4>
           <ul class="skill-list">
+            <li>Docker</li>
+            <li>Git</li>
+            <li>GitHub Actions</li>
+            <li>Vercel</li>
+            <li>Railway</li>
+            <li>Cloudflare</li>
+            <li>Google Cloud Platform</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h4>AI &amp; APIs</h4>
+          <ul class="skill-list">
+            <li>OpenAI API</li>
+            <li>Anthropic API</li>
+            <li>Hugging Face</li>
+            <li>Pinecone</li>
+            <li>Stripe</li>
+            <li>Pydantic</li>
+            <li>Google Cloud API</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h4>Product &amp; Tools</h4>
+          <ul class="skill-list">
+            <li>Figma</li>
+            <li>Clerk</li>
+            <li>PostHog</li>
             <li>NLP</li>
-            <li>Swift - iOS</li>
-            <li>Unity - C#</li>
           </ul>
         </div>
       </div>
