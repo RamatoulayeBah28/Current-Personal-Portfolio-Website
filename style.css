@@ -101,14 +101,14 @@ nav {
 }
 
 .hero-photo img {
-  width: 75%;
-  height: 420px;
+  width: min(78%, 620px);
+  height: clamp(420px, 62vh, 680px);
   object-fit: cover;
-  object-position: center top;
+  object-position: center 58%;
   display: block;
   border-radius: 12px;
-  margin-top: 9rem;
-  margin-right: 9rem;
+  margin-top: clamp(5rem, 9vh, 9rem);
+  margin-right: clamp(2rem, 8vw, 9rem);
 }
 
 .photo-socials {
